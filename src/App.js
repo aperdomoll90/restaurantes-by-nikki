@@ -1,20 +1,20 @@
 
 import './App.css'
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
-import Footer from './components/Footer'
 
 
+export const UserContext = createContext(null)
 function App() {
+  const [newRestaurant, setNewRestaurant] = useState({})
   return (
-    <>
+    <UserContext.Provider value={{ newRestaurant, setNewRestaurant }}>
     <section className="App">
     <Header />
     <Main />
-     <Footer/>
      </section>
-    </>
+     </UserContext.Provider>
   )
 }
 

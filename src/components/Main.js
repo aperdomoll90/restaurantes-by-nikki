@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css'
-import {Card, Button} from 'react-bootstrap'
 import SingleRestaurant from './Singlerestaurant'
 
 
@@ -16,7 +15,7 @@ function Main() {
 
   return (
     < >
-    < div style={{ display: 'flex',flexWrap: 'wrap',justifyContent: 'space-between', width: '100%', margin: '3rem 0' }} >
+    < div className="cardField" >
       {!restaurants ? (
         <p>Locating Restaurants...</p>
       ) : (

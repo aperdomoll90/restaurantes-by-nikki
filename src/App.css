@@ -1,32 +1,107 @@
-.App {
-  text-align: center;
-  background-color: #282c34;
-  
+.sideNav {
+  background-color: rgb(134, 22, 22);
+  width: 20vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color:whitesmoke;
+  padding-top: 2%;
+  padding-left: 1%;
 }
+p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:rgb(43, 151, 0);
 
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 2vh;
+}
+.addForm{
+  height: 45vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  margin: 10%;
+}
+.addButton{
+  width: 40%;
+  color:rgb(43, 151, 0);
 }
 
-.resize{
+.cardField {
+  background-color: rgb(25, 194, 152);
+  width: 80vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  padding: 2%;
+}
+
+.card{
+  width:16vw ;
+  height: 40vh;
+  margin: 0.5%;
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.infoArea{
+  width: 100%;
+  /* background-color: rgba(28, 153, 122, 0.335); */
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  font-size: 2rem;
+  font-weight: 900;
+  color:rgb(43, 151, 0);
+}
+.info{
+  font-size: 0.9rem;
+  color: black;
+}
+.resize {
   position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
-/* max-width: 150px;
+  /* max-width: 150px;
 max-height: 150px; */
 }
+
+
+.progress {
+  position: relative;
+  width: 210px;
+  height: 30px;
+  background: #9cbab4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  width: 0%;
+  height: 100%;
+  background: #009579;
+  transition: all 0.2s;
+}
+
+.progress__text {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  font: bold 14px "Quicksand", sans-serif;
+  color: #ffffff;
+}
+
+
 
 .App-link {
   color: #61dafb;
 }
-

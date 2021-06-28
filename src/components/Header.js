@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+
+import React, { useContext } from 'react'
+import { UserContext } from '../App'
 import '../App.css'
-import AddNewForm from './AddNewForm'
-import { Navbar, Button, Form, Nav, FormControl,Label  } from 'react-bootstrap'
+import { Button, Form, FormControl } from 'react-bootstrap'
 
 function Header() {
-  const [newRestaurant, setNewRestaurant] = useState({})
+  const { newRestaurant, setNewRestaurant } = useContext(UserContext)
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -23,7 +24,47 @@ function Header() {
 
   console.log(newRestaurant)
   return (
-<AddNewForm handleSubmit='handleSubmit' newRestaurant='newRestaurant' setNewRestaurant='setNewRestaurant'/>
+    <>
+    <div className="sideNav">
+   <p>Add New Restaurant</p>
+   
+   <Form className="addForm">
+     <div>
+   <label>
+   Name:
+     <FormControl name="name" type="text" placeholder="Search" className="mr-sm-2"
+     onChange={(e) => setNewRestaurant({ ...newRestaurant, name: e.target.value })}
+     />
+     </label>
+     <label>
+       Address:
+       <FormControl name="Address" type="text" placeholder="Search" className="mr-sm-2"
+         onChange={(e) => setNewRestaurant({ ...newRestaurant, address: e.target.value })
+         }
+       />
+     </label>
+     <label>
+       Rating:
+       <FormControl name="Rating" type="text" placeholder="Search" className="mr-sm-2"
+         onChange={(e) => setNewRestaurant({ ...newRestaurant, rating: e.target.value })
+         }
+       />
+     </label>
+     <label>
+     photoUrl:
+       <FormControl name="photoUrl" type="text" placeholder="Search" className="mr-sm-2"
+         onChange={(e) =>
+           setNewRestaurant({
+             ...newRestaurant,
+             photoUrl: e.target.value,
+           })
+         }
+       />
+     </label>
+     </div>
+     <Button className="addButton" variant="outline-info" onClick={(e) => handleSubmit(e)}>Submit</Button>
+   </Form></div>
+  </>
   )
 }
 
