@@ -42,16 +42,20 @@ p {
 }
 
 .card{
-  width:16vw ;
+  position: relative;
+  width:22vw ;
   height: 40vh;
   margin: 0.5%;
-  border-radius: 100%;
+  padding-left: 5%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.459);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .infoArea{
-  width: 100%;
-  /* background-color: rgba(28, 153, 122, 0.335); */
-    display: flex;
+  position: absolute;
+  top:40%;
+  width: 80%;
+   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -66,25 +70,26 @@ p {
   color: black;
 }
 .resize {
-  position: relative;
-  width: 50%;
-  height: 50%;
+  position: absolute;
+  top: -2%;
+  left:-2%;
+  width: 45%;
+  height: 45%;
   border-radius: 50%;
-  /* max-width: 150px;
-max-height: 150px; */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 
-.progress {
+/* .progress {
   position: relative;
   width: 210px;
   height: 30px;
   background: #9cbab4;
   border-radius: 5px;
   overflow: hidden;
-}
+} */
 
-.progress__fill {
+/* .progress__fill {
   width: 0%;
   height: 100%;
   background: #009579;
@@ -98,7 +103,7 @@ max-height: 150px; */
   transform: translateY(-50%);
   font: bold 14px "Quicksand", sans-serif;
   color: #ffffff;
-}
+} */
 
 
 

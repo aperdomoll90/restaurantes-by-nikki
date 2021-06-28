@@ -21,10 +21,10 @@ function SingleRestaurant({ restaurant }) {
       <Card.Img src={restaurant.photoUrl} alt='restaurant pic' className='resize' />
       <Card.Body className='infoArea'>
         <Card.Title className='title'>{restaurant.name}</Card.Title>
-        <div class='progress'>
+        {/* <div class='progress'>
           <div class='progress__fill'></div>
           <span class='progress__text'>{restaurant.rating}</span>
-        </div>
+        </div> */}
         <Card.Text className='info'>{restaurant.address}</Card.Text>
       </Card.Body>
     </Card>
